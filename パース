@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二点透視図法で立方体を描く方法</title>
+<style>
+    :root {
+      --main-color: rgb(193, 30, 63);
+      --accent-color: #ffb3c1; /* 明るいピンクを補助に */
+      --bg-color: #fff5f7; /* 柔らかい背景色 */
+      --text-color: #333;
+    }
+
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: var(--main-color);
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px rgba(193,30,63,0.3);
+    }
+
+    .step {
+      background: #fff;
+      border: 2px solid var(--main-color);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(193,30,63,0.15);
+      margin-bottom: 25px;
+      padding: 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(193,30,63,0.25);
+    }
+
+    .step img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 12px auto;
+      border-radius: 8px;
+      border: 3px solid var(--accent-color);
+    }
+
+    .step h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--main-color);
+      border-bottom: 2px dashed var(--accent-color);
+      padding-bottom: 5px;
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--main-color);
+      margin-top: 40px;
+      font-size: 0.9rem;
+      padding: 10px;
+      background: var(--accent-color);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+<h1>二点透視図法で立方体を描く手順</h1>
+
+
+<div class="step">
+<h2>ステップ1：縦に線を引く</h2>
+<p>適当な長さの線を一本引きます。</p>
+<img src="step1.jpg" alt="地平線と消失点の図">
+</div>
+
+
+<div class="step">
+<h2>ステップ2：消失点を決める</h2>
+<p>ステップ１の上からから左右の端に向かって線を引き、ステップ１に垂直になる線を２本の線に交わる様に引きます。交わった２つの点が消失点です。</p>
+<img src="step2.jpg" alt="前の角の垂直線">
+</div>
+
+
+<div class="step">
+<h2>ステップ3：手前に見える立方体の下の辺を引く</h2>
+<p>ステップ１の下から消失点に向かって線を引きます。</p>
+<img src="step3.jpg" alt="補助線を引く">
+</div>
+
+
+<div class="step">
+<h2>ステップ4：立方体の高さを決める</h2>
+<p>ステップ２とステップ３を直線で左右一カ所ずつ結びます。</p>
+<img src="step4.jpg" alt="奥の角を描く">
+</div>
+
+
+<div class="step">
+<h2>ステップ5：立方体の上面が完成</h2>
+<p>ステップ２とステップ４の交点から消失点に向かって線を引きます。</p>
+<img src="step5.jpg" alt="奥行きを完成させる">
+</div>
+
+
+<div class="step">
+<h2>ステップ6：立方体の底面が完成</h2>
+<p>ステップ３とステップ４の交点から消失点に向かって線を引きます。</p>
+<img src="step6.jpg" alt="補助線を消す">
+</div>
+
+
+<div class="step">
+<h2>ステップ7：完成</h2>
+<p>ステップ５で生じた交点とステップ６で生じた交点を線で結びます。</p>
+<img src="step7.jpg" alt="完成した立方体">
+</div>
+
+
+<footer>
+<p>© 2025 二点透視図法チュートリアル</p>
+</footer>
+</body>
+</html>
